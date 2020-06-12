@@ -17,4 +17,6 @@ Contains src code for the system.
 Contains unit tests for the RST tree parser.
 ### figs
 Contains generated aspect hierchy graphs.
+### Sys.Arc
+SVG file for system architecture
 
