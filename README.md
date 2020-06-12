@@ -6,7 +6,9 @@ See Pipfile
 
 ## Structure
 ### feng-hirst-rst-parser
-To install the RST parser, please see [here](https://github.com/arne-cl/feng-hirst-rst-parser).
+To install and run the RST parser, please see [here](https://github.com/arne-cl/feng-hirst-rst-parser).
+### rst_results
+Contains RST visualization (graphs) and the gloabally extracted aspect pair
 ### data
 Contains preprocessed Amazon Reviews and other resource files used by the system.
 ### src
