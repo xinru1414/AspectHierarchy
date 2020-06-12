@@ -1,4 +1,4 @@
-# **OVERVIEW**
+## OVERVIEW
 Opinion mining on Amazon product reviews [using rhetorical structure theory](https://arxiv.org/abs/1909.01800).
 
 ## Dependencies 
