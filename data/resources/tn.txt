@@ -1,0 +1,88 @@
+review id: 2841723731
+aspect pairs: ('shoulder pain', 'rv')
+clauses: ['I never had any shoulder pain', 'when sleeping in our RV .']
+
+review id: 2734875657
+aspect pairs: ('twoinch memory foam topper', 'floor')
+clauses: ['Then I bought a two-inch memory foam topper and a cushy mattress pad ,', 'which made the mattress bearable , although still very low to the floor .']
+
+review id: 2719391311
+aspect pairs: ('air', 'no pumps')
+clauses: ['As soon as the mattress came out of the box , it aired-up nicely ( takes in air on its own', '-- no pumps necessary . )']
+
+review id: 2692989361
+aspect pairs: ('plastic', 'tears')
+clauses: ['The plastic', "it 's wrapped in tears easily so you do n't have to risk damaging the mattress with scissors ."]
+
+review id: 2692989361
+aspect pairs: ('plastic', 'scissors')
+clauses: ['The plastic', "it 's wrapped in tears easily so you do n't have to risk damaging the mattress with scissors ."]
+
+review id: 2721412544
+aspect pairs: ('box spring', 'very convincing and fasttalking sales person')
+clauses: ['and bought a very expensive pillow top mattress and box spring', 'set from a very convincing and fast-talking sales person .', "by when we did n't awake with some odd ache or pain .", "A night did n't go"]
+
+review id: 2949530343
+aspect pairs: ('price', 'tn')
+clauses: ['The price was exactly the same', 'as buying direct from T&N or from Amazon .', 'was my low back pain was significantly less', 'after sleeping on the T&N .']
+
+review id: 2949530343
+aspect pairs: ('price', 'amazon')
+clauses: ['The price was exactly the same', 'as buying direct from T&N or from Amazon .', 'was my low back pain was significantly less', 'after sleeping on the T&N .']
+
+review id: 2949530343
+aspect pairs: ('low back pain', 'tn')
+clauses: ['The price was exactly the same', 'as buying direct from T&N or from Amazon .', 'was my low back pain was significantly less', 'after sleeping on the T&N .']
+
+review id: 2776624172
+aspect pairs: ('shoulder pain', '2 days')
+clauses: ['I was having shoulder pain with our old mattress', 'but it was gone within 2 days of getting our new mattress .']
+
+review id: 2935718489
+aspect pairs: ('tn topper', 'suggested video')
+clauses: ['I was about to go with the T&N mattress topper', 'when a suggested video popped up for " natural latex mattress toppers " .', "It was n't hard for me to move and position the topper .", 'I was by myself .', 'This topper is super comfortable !', 'That night I slept straight through the night .']
+
+review id: 2935718489
+aspect pairs: ('topper', 'myself')
+clauses: ['I was about to go with the T&N mattress topper', 'when a suggested video popped up for " natural latex mattress toppers " .', "It was n't hard for me to move and position the topper .", 'I was by myself .', 'This topper is super comfortable !', 'That night I slept straight through the night .']
+
+review id: 2718484532
+aspect pairs: ('air', 'mom')
+clauses: ['we started sleeping on an air mattress .', "When we got to my mom 's"]
+
+review id: 2743797756
+aspect pairs: ('pain', 'weight gain')
+clauses: ['In addition , that pain led me to be less active ,', 'which contributed to weight gain ,']
+
+review id: 2723892870
+aspect pairs: ('topper', 'another 50 rebate')
+clauses: ['that we had purchased a mattress topper', 'they gave me another $ 50 rebate ...']
+
+review id: 2768349840
+aspect pairs: ('reasonable price', 'bad ad')
+clauses: ["but I LOVE , LOVE , LOVE this mattress and even more so for it 's reasonable price .", "Sorry if I 'm gushing or sound like a bad ad ,"]
+
+review id: 2728617258
+aspect pairs: ('plastic', 'door')
+clauses: ['cutting the plastic off the mattress', "when it 's delivered to my door - in a size easy to move around - a box 4 feet high and 19 inches square - then as air returns to the mattress"]
+
+review id: 2728617258
+aspect pairs: ('plastic', 'size')
+clauses: ['cutting the plastic off the mattress', "when it 's delivered to my door - in a size easy to move around - a box 4 feet high and 19 inches square - then as air returns to the mattress"]
+
+review id: 2728617258
+aspect pairs: ('plastic', 'box')
+clauses: ['cutting the plastic off the mattress', "when it 's delivered to my door - in a size easy to move around - a box 4 feet high and 19 inches square - then as air returns to the mattress"]
+
+review id: 2728617258
+aspect pairs: ('plastic', 'air')
+clauses: ['cutting the plastic off the mattress', "when it 's delivered to my door - in a size easy to move around - a box 4 feet high and 19 inches square - then as air returns to the mattress"]
+
+review id: 2713691771
+aspect pairs: ('memory foam', 'body')
+clauses: ['without having to wait for memory foam', 'to re-adapt to your body .', 'that give you the comfort of memory foam', 'that T&N developed']
+
+review id: 2713691771
+aspect pairs: ('memory foam', 'tn')
+clauses: ['without having to wait for memory foam', 'to re-adapt to your body .', 'that give you the comfort of memory foam', 'that T&N developed']
+

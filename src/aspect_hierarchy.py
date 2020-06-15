@@ -48,10 +48,10 @@ def get_brand_name(name: str) -> str:
 
 
 @click.command()
-@click.option('-b', '--brand', default='TN')
+@click.option('-b', '--brand', default='All')
 @click.option('-p', '--path', default='../feng-2/feng-hirst-rst-parser/results2')
 @click.option('-d', '--datafile', default='../data/preprocessed/brand_data_new.csv')
-@click.option('-ca', '--resrouce_ca', default='../data/resources/cared_aspects')
+@click.option('-ca', '--resrouce_ca', default='../data/resources/primary_aspects')
 @click.option('-na', '--resrouce_na', default='../data/resources/not_cared_aspects')
 @click.option('-rl', '--resrouce_rl', default='../data/resources/relations')
 @click.option('-dt', '--resrouce_dt', default='../data/resources/determiners')
@@ -77,7 +77,12 @@ def main(brand, path, datafile, resrouce_ca, resrouce_na, resrouce_rl, resrouce_
         total = first.union(second)
         save_pickle('../data/resources/all_pairs', total)
     else:
-        get_pairs_only(brand_relation_based_pairs_with_meta)
+        first = {(f'{brand}_mattress', i) for i in cared_aspects}
+        second = get_brand_pairs(d=brand_relation_based_pairs_with_meta, primary_aspects=cared_aspects, not_cared_aspects=not_cared_aspects, determiners=determiners)
+        total = first.union(second)
+        save_pickle(f'../data/resources/{brand}_pairs', total)
+        # print out brand specific aspects for analysis purpose
+        print_brand_pairs_only(d=brand_relation_based_pairs_with_meta, not_cared_aspects=not_cared_aspects, determiners=determiners)
 
 
 if __name__ == '__main__':
