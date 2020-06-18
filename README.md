@@ -43,7 +43,7 @@ $ pipenv run python aspect_hierarchy.py
 ```
 $ pipenv run python gen_graph.py
 ```
-All python files allow users to set up command line parameters. Details see each python file, or simply add `--help` to each command.
+All python files allow users to set up command line parameters. Details see each python file, or simply add `--help` at the end of each command.
 
 ## Structure
 ### feng-hirst-rst-parser
@@ -58,4 +58,6 @@ Contains src code for the system.
 Contains unit tests for the RST tree parser.
 ### figs
 Contains generated aspect hierarchy graphs.
+### run.sh
+A sample script to run the system.
 
