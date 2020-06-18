@@ -1,4 +1,4 @@
-## Aspect Hierarchy
+# Aspect Hierarchy
 Opinion mining on Amazon product reviews [using rhetorical structure theory and graph analysis](https://arxiv.org/abs/1909.01800).
 
 ## Installation & Dependencies 
