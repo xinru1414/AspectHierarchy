@@ -15,7 +15,7 @@ $ docker build -t feng-hirst .
 ## Usage
 [Sys.Arc](https://github.com/xinru1414/AspectHierarchy/blob/master/SysArc.svg) provides an overview of the system architecture.
 
-The system takes a CSV file as an input, including three columns: `Id`, `Text`, and `Brand`. Column `Id` represents the review id, Column `Text` represents the product review and Column `Brand` represents the product brand.
+The system takes a CSV file as an input, including four columns: `Id`, `Text`, `Brand` and `ReviewRating`. Column `Id` represents the review id, Column `Text` represents the product review, Column `Brand` represents the product brand and Column `ReviewRating` represents the rating for the product in range `[0,100]`.
 
 To run the system:
 
