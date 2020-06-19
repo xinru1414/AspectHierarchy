@@ -8,7 +8,7 @@ After cloning the project, run the following command in the root dir `AspectHier
 ```
 $ pipenv install
 ```
-This package uses [feng-hirst-rst-parser](https://github.com/arne-cl/feng-hirst-rst-parser). In the `feng-hirst-rst-parser`  dir, run the following command to build an image from the dockerfile.
+This package uses [feng-hirst-rst-parser](https://github.com/arne-cl/feng-hirst-rst-parser). In order to run the parser, fisrt start running Docker, then in the `feng-hirst-rst-parser`  dir, run the following command to build an image from the dockerfile.
 ```
 $ docker build -t feng-hirst .
 ```
