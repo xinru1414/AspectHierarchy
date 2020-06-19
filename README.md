@@ -17,7 +17,7 @@ $ docker build -t feng-hirst .
 
 The system takes a CSV file as an input, including four columns: `Id`, `Text`, `Brand` and `ReviewRating`. Column `Id` represents the review id, Column `Text` represents the product review, Column `Brand` represents the product brand and Column `ReviewRating` represents the rating for the product in range `[0,100]`.
 
-Below is a step by step instruction on how to run the system. You can also find them in the `run.sh` file in the `src` dir.
+Below is a step by step instruction on how to run the system. You can also find them in the `run.sh` file in `src` dir.
 
 1. Run the following command in `src` dir to prepare data for the RST parser.
 ```
@@ -47,17 +47,14 @@ All python files allow users to set up command line parameters. Details see each
 
 ## Structure
 ### feng-hirst-rst-parser
-Contains code for `feng-hirst-rst-parser`, dir preprocessed_texts and dir results.
+Contains code for `feng-hirst-rst-parser`, dir `preprocessed_texts` and dir `results`.
 ### rst_results
-Contains RST visualization (graphs) and the gloabally extracted aspect pairs.
+Contains RST visualization (graphs) and the globally extracted aspect pairs.
 ### data
 Contains preprocessed Amazon Reviews and other resource files used by the system.
 ### src
-Contains src code for the system.
+Contains src code for the system and a script `run.sh` to run the system.
 ### test
 Contains unit tests for the RST tree parser.
 ### figs
 Contains generated aspect hierarchy graphs.
-### run.sh
-A sample script to run the system.
-
