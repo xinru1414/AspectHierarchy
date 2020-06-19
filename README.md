@@ -17,7 +17,7 @@ $ docker build -t feng-hirst .
 
 The system takes a CSV file as an input, including four columns: `Id`, `Text`, `Brand` and `ReviewRating`. Column `Id` represents the review id, Column `Text` represents the product review, Column `Brand` represents the product brand and Column `ReviewRating` represents the rating for the product in range `[0,100]`.
 
-To run the system:
+Below is a step by step instruction on how to run the system. You can also find them in the `run.sh` file in the `src` dir.
 
 1. Run the following command in `src` dir to prepare data for the RST parser.
 ```
@@ -25,7 +25,7 @@ $ pipenv run python review_preprocess.py
 ```
 2. Run the following command in `feng-hirst-rst-parser/preprocessed_texts` dir to perform RST.
 ```
-$ ./run.sh
+$ ./runrst.sh
 ```
 3. Run the following command in `src` dir to parse RST result, create RST graphs and generate aspect pairs.
 ```
