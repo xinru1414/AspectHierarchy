@@ -29,24 +29,6 @@ def get_data(name: str, d: pd.DataFrame) -> Set:
     return review_ids
 
 
-def get_brand_name(name: str) -> str:
-    if name == 'Classic':
-        brand_name = 'Classic Brands'
-    elif name == 'TN':
-        brand_name = 'Tuft & Needle'
-    elif name == 'Serta':
-        brand_name = 'Serta'
-    elif name == 'Casper':
-        brand_name = 'Casper'
-    elif name == 'Zinus':
-        brand_name = 'Zinus'
-    elif name == 'All':
-        brand_name = 'All'
-    else:
-        raise ValueError("Please enter a valid brand name from: Casper, TN, Classic, Zinus, Serta, All")
-    return brand_name
-
-
 @click.command()
 @click.option('-b', '--brand', default='All')
 @click.option('-p', '--path', default='../feng-2/feng-hirst-rst-parser/results2')
@@ -55,12 +37,12 @@ def get_brand_name(name: str) -> str:
 @click.option('-na', '--resrouce_na', default='../data/resources/not_cared_aspects')
 @click.option('-rl', '--resrouce_rl', default='../data/resources/relations')
 @click.option('-dt', '--resrouce_dt', default='../data/resources/determiners')
-def main(brand, path, datafile, resrouce_ca, resrouce_na, resrouce_rl, resrouce_dt):
+@click.option('-k', '--keyword', default='mattress')
+def main(brand, path, datafile, resrouce_ca, resrouce_na, resrouce_rl, resrouce_dt, keyword):
     path = path + '/*.parse'
     files = glob.glob(path)
     data = pd.read_csv(datafile)
 
-    brand = get_brand_name(brand)
     brand_full_review = get_data(brand, data)
     cared_aspects = read_txt(resrouce_ca)
     not_cared_aspects = read_txt(resrouce_na)
@@ -69,15 +51,17 @@ def main(brand, path, datafile, resrouce_ca, resrouce_na, resrouce_rl, resrouce_
 
     brand_pairs = read_relevant_parse_files_for_all_relations(files, brand_full_review, relations)
     brand_pairlist = gen_list_of_pairs_with_meta(get_noun_chunk_pairs_with_meta(brand_pairs))
-    brand_relation_based_pairs_with_meta = relation_based_pairs_with_meta(brand_pairlist, cared_aspects)
+    brand_relation_based_pairs_with_meta = relation_based_pairs_with_meta(brand_pairlist, cared_aspects, keyword)
 
     if brand == 'All':
-        first = {('mattress', i) for i in cared_aspects}
+        first = {(keyword, i) for i in cared_aspects}
+        print('generating secondary aspect')
         second = get_all_pairs(brand_relation_based_pairs_with_meta, cared_aspects, not_cared_aspects, determiners)
         total = first.union(second)
-        save_pickle('../data/resources/all_pairs', total)
+        save_pickle(f'../data/resources/{brand}_pairs', total)
+        print(total)
     else:
-        first = {(f'{brand}_mattress', i) for i in cared_aspects}
+        first = {(brand, i) for i in cared_aspects}
         second = get_brand_pairs(d=brand_relation_based_pairs_with_meta, primary_aspects=cared_aspects, not_cared_aspects=not_cared_aspects, determiners=determiners)
         total = first.union(second)
         save_pickle(f'../data/resources/{brand}_pairs', total)

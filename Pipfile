@@ -1,28 +1,17 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
-
-[packages]
-ipython = "*"
-pandas = "*"
-click = "*"
-nltk = "*"
-rust = "*"
-flair = "*"
-seaborn = "*"
-ipykernel = "*"
-praw = "*"
-psaw = "*"
-selenium = "*"
-graphviz = "*"
-spacy = "*"
-dynet-config = "*"
-dynet = {git = "https://github.com/clab/dynet"}
-cython = "*"
-parse = "*"
 
 [dev-packages]
+
+[packages]
+click = "*"
+graphviz = "*"
+nltk = "*"
+pandas = "*"
+spacy = "*"
+textblob = "*"
 
 [requires]
 python_version = "3.7"

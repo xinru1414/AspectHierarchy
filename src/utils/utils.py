@@ -37,3 +37,11 @@ def read_txt(filename: str) -> List:
     with open(filename, 'r') as f:
         l = f.read().splitlines()
     return l
+
+
+def write_txt(filename: str, input: str):
+    '''
+    Write a string to a txt file
+    '''
+    with open(filename, 'w') as f:
+        f.write(input)

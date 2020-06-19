@@ -3,5 +3,5 @@
 for file in *.txt
 do
     echo "$file"
-    docker run -v /path_to_parser/preprocessed_texts:/name -ti feng-hirst "/name/$file" > "../results2/$file.parse"
+    docker run -v /Users/xinruyan/Developer/Mattress/AspectHierarchy/feng-hirst-rst-parser/preprocessed_txts:/xinru -ti feng-hirst "/xinru/$file" > "../results/$file.parse"
 done
