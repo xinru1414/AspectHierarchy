@@ -414,9 +414,9 @@ def get_brand_pairs(d: Dict, primary_aspects: List, not_cared_aspects: List, det
                 else:
                     new_x = [i for i in x.split() if i in primary_aspects][0]
                     additional_y = ' '.join([i for i in x.split() if i not in primary_aspects])
-                    if y not in ignore and y not in primary_aspects:
+                    if y not in ignore and y not in primary_aspects and len(y) < 20:
                         pairs.append((new_x, y))
-                    if additional_y not in ignore and additional_y not in primary_aspects:
+                    if additional_y not in ignore and additional_y not in primary_aspects and len(additional_y) < 20:
                         pairs.append((new_x, additional_y))
     return set(pairs)
 
