@@ -1,0 +1,20 @@
+review id: 2820811731
+aspect pairs: ('memory foam', 'hybrid')
+clauses: ['Serta combines them with memory foam in some of the mattresses', '( hybrid )']
+
+review id: 2762973158
+aspect pairs: ('first full price new', 'college')
+clauses: ['my first " full price new mattress "', 'out of college was a Serta memory foam bed in full size .', 'This topper is the traditional " visco feel " memory foam', 'that has more memory effect than your typical topper .']
+
+review id: 2762973158
+aspect pairs: ('first full price new', 'serta memory foam')
+clauses: ['my first " full price new mattress "', 'out of college was a Serta memory foam bed in full size .', 'This topper is the traditional " visco feel " memory foam', 'that has more memory effect than your typical topper .']
+
+review id: 2762973158
+aspect pairs: ('topper', 'more memory effect')
+clauses: ['my first " full price new mattress "', 'out of college was a Serta memory foam bed in full size .', 'This topper is the traditional " visco feel " memory foam', 'that has more memory effect than your typical topper .']
+
+review id: 2762973158
+aspect pairs: ('memory foam', 'typical topper')
+clauses: ['my first " full price new mattress "', 'out of college was a Serta memory foam bed in full size .', 'This topper is the traditional " visco feel " memory foam', 'that has more memory effect than your typical topper .']
+

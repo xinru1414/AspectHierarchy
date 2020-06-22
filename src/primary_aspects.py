@@ -137,7 +137,7 @@ def main(pairs, resource_na, keyword):
     key_word_plural = creat_plural(keyword)
     most_common_mattress_cnew_snmp, _ = keyword_map(keyword, key_word_plural,
                                                             most_common_cnew_snmp, not_cared_aspects)
-    print(f'Most common 40 primary aspects:')
+    print(f'Most common primary aspects:')
     for item in most_common_mattress_cnew_snmp:
         print(item[1])
 

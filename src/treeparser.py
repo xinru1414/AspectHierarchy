@@ -296,10 +296,6 @@ def get_noun_chunk_pairs_with_meta(tree_pairs: Dict) -> Dict:
     nlp = spacy.load("en_core_web_sm")
     for review_id, pair in tree_pairs.items():
         for n, s in pair:
-            # if 'Tuft & Needle' in n:
-            #     n = n.replace('Tuft & Needle', 'T&N')
-            # if 'Tuft & Needle' in s:
-            #     s = s.replace('Tuft & Needle', 'T&N')
             doc_n, doc_s = nlp(n), nlp(s)
             chunks_n, chunks_s = get_noun_chunks(doc_n), get_noun_chunks(doc_s)
             if len(chunks_n) > 0 and len(chunks_s) > 0:
@@ -471,17 +467,16 @@ def get_trees(s: List) -> List[TreeNode]:
 
 
 @click.command()
-@click.option('-i', '--inputdir', 'input_dir', type=str, default='../feng-2/feng-hirst-rst-parser/results2')
+@click.option('-i', '--inputdir', 'input_dir', type=str, default='../feng-hirst-rst-parser/results')
 @click.option('-o', '--outputdir', 'output_dir', type=str, default='../rst_results')
 def main(input_dir, output_dir):
     path = input_dir + '/*.parse'
     files = glob.glob(path)
     pairs = read_files(files, output_dir)
-
     noun_chunk_pairs = get_noun_chunk_pairs(pairs)
     pairs = gen_list_of_pairs(noun_chunk_pairs)
 
-    save_pickle(f'{output_dir}/noun_pairs.pickle2', pairs)
+    save_pickle(f'{output_dir}/noun_pairs.pickle', pairs)
 
 
 def tests():

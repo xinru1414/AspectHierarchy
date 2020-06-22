@@ -17,7 +17,7 @@ import click
 @click.option('-b', '--brand', default='All')
 @click.option('-o', '--output', default='../figs/')
 def main(brand, output):
-    brandpair = read_pickle(f'../data/resources/{brand}_pairs')
+    brandpair = read_pickle(f'../data/brand/{brand}_pairs')
     tree = get_trees(brandpair)
     g = tree[0].asp_graph()
     output_path = output + brand

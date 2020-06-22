@@ -1,0 +1,20 @@
+review id: 2957349973
+aspect pairs: ('casper topper', 'new level')
+clauses: ['I am very pleased with this Casper Mattress topper', 'as it truly gives my old mattress a new level of comfort .', 'This topper by Casper has transformed my bed into a place', "where I 'm getting a great night 's sleep on now one of the best beds"]
+
+review id: 2957349973
+aspect pairs: ('casper topper', 'comfort')
+clauses: ['I am very pleased with this Casper Mattress topper', 'as it truly gives my old mattress a new level of comfort .', 'This topper by Casper has transformed my bed into a place', "where I 'm getting a great night 's sleep on now one of the best beds"]
+
+review id: 2957349973
+aspect pairs: ('topper', 'great s sleep')
+clauses: ['I am very pleased with this Casper Mattress topper', 'as it truly gives my old mattress a new level of comfort .', 'This topper by Casper has transformed my bed into a place', "where I 'm getting a great night 's sleep on now one of the best beds"]
+
+review id: 2957349973
+aspect pairs: ('topper', 'best beds')
+clauses: ['I am very pleased with this Casper Mattress topper', 'as it truly gives my old mattress a new level of comfort .', 'This topper by Casper has transformed my bed into a place', "where I 'm getting a great night 's sleep on now one of the best beds"]
+
+review id: 2867876351
+aspect pairs: ('memory foam', 'similar priced ones')
+clauses: ['it had 3 inches of memory foam and multi layers of comfort and support foam .', 'What I liked about this one is', 'they only had 2 inches of memory foam ,', 'When I looked at other similar priced ones', 'all of the mattress was level and flat with no dips or bends at the sides and no gross smell', 'like you get with a lot of these kinds of mattresses .']
+

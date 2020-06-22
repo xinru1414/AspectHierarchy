@@ -1,4 +1,4 @@
-## preprocessed
+## review
 Contains the csv header for the Amazon product reviews. 
 ## resources
 Contains various files including pre-defined filtering vocabulary files, intermediate output files and interpretation files from running parts of the system

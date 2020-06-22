@@ -31,8 +31,8 @@ def get_data(name: str, d: pd.DataFrame) -> Set:
 
 @click.command()
 @click.option('-b', '--brand', default='All')
-@click.option('-p', '--path', default='../feng-2/feng-hirst-rst-parser/results2')
-@click.option('-d', '--datafile', default='../data/preprocessed/brand_data_new.csv')
+@click.option('-p', '--path', default='../feng-hirst-rst-parser/results')
+@click.option('-d', '--datafile', default='../data/review/sample_data.csv')
 @click.option('-ca', '--resrouce_ca', default='../data/resources/primary_aspects')
 @click.option('-na', '--resrouce_na', default='../data/resources/not_cared_aspects')
 @click.option('-rl', '--resrouce_rl', default='../data/resources/relations')
@@ -52,19 +52,16 @@ def main(brand, path, datafile, resrouce_ca, resrouce_na, resrouce_rl, resrouce_
     brand_pairs = read_relevant_parse_files_for_all_relations(files, brand_full_review, relations)
     brand_pairlist = gen_list_of_pairs_with_meta(get_noun_chunk_pairs_with_meta(brand_pairs))
     brand_relation_based_pairs_with_meta = relation_based_pairs_with_meta(brand_pairlist, cared_aspects, keyword)
-
     if brand == 'All':
         first = {(keyword, i) for i in cared_aspects}
-        print('generating secondary aspect')
         second = get_all_pairs(brand_relation_based_pairs_with_meta, cared_aspects, not_cared_aspects, determiners)
         total = first.union(second)
-        save_pickle(f'../data/resources/{brand}_pairs', total)
-        print(total)
+        save_pickle(f'../data/brand/{brand}_pairs', total)
     else:
         first = {(brand, i) for i in cared_aspects}
         second = get_brand_pairs(d=brand_relation_based_pairs_with_meta, primary_aspects=cared_aspects, not_cared_aspects=not_cared_aspects, determiners=determiners)
         total = first.union(second)
-        save_pickle(f'../data/resources/{brand}_pairs', total)
+        save_pickle(f'../data/brand/{brand}_pairs', total)
         # print out brand specific aspects for analysis purpose
         print_brand_pairs_only(d=brand_relation_based_pairs_with_meta, not_cared_aspects=not_cared_aspects, determiners=determiners)
 
