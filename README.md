@@ -58,3 +58,6 @@ Contains src code for the system and a script `run.sh` to run the system.
 Contains unit tests for the RST tree parser.
 ### figs
 Contains generated aspect hierarchy graphs.
+
+## LICENSE
+MIT
