@@ -15,7 +15,7 @@ import click
 
 @click.command()
 @click.option('-b', '--brand', default='All')
-@click.option('-o', '--output', default='../figs/')
+@click.option('-o', '--output', default='../graphs/')
 def main(brand, output):
     brandpair = read_pickle(f'../data/brand/{brand}_pairs')
     tree = get_trees(brandpair)

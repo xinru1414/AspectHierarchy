@@ -3,7 +3,7 @@ echo '#################################################################'
 echo Type in the input data path:
 read input
 echo '#################################################################'
-echo Type in the brand:
+echo 'Type in the brand (All for all brands)':
 read brand
 echo '#################################################################'
 echo Building feng-hirst-rst-parser
@@ -29,6 +29,6 @@ echo Generating and examining secondary aspects.
 pipenv run python aspect_hierarchy.py -b $brand -p ../feng-hirst-rst-parser/results -d $input -ca ../data/resources/primary_aspects -na ../data/resources/not_cared_aspects -rl ../data/resources/relations -dt ../data/resources/determiners -k mattress > "../data/brand/$brand.txt"
 echo '#################################################################'
 echo Creating aspect hierarchy graphs.
-pipenv run python gen_graph.py -b $brand -o ../figs/
+pipenv run python gen_graph.py -b $brand -o ../graphs/
 echo '#################################################################'
 echo Done
