@@ -12,6 +12,10 @@ This package uses [feng-hirst-rst-parser](https://github.com/arne-cl/feng-hirst-
 ```
 $ docker build -t feng-hirst .
 ```
+If you have problems installing pipenv, you can install python dependencies by running the following command:
+```
+pip install -r requirements.txt
+```
 ## Usage
 [Sys.Arc](https://github.com/xinru1414/AspectHierarchy/blob/master/SysArc.svg) provides an overview of the system architecture.
 
