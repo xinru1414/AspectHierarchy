@@ -3,10 +3,10 @@ echo '#################################################################'
 echo Type in the input data path:
 read input
 echo '#################################################################'
-echo 'Type in the brand (All for all brands)':
+echo 'Type in the brand (case sensitive; All for all brands)':
 read brand
 echo '#################################################################'
-echo Type in the product:
+echo 'Type in the product (lowercase)':
 read keyword
 echo '#################################################################'
 echo Building feng-hirst-rst-parser
