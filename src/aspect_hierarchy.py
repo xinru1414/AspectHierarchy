@@ -57,6 +57,7 @@ def main(brand, path, datafile, resrouce_ca, resrouce_na, resrouce_rl, resrouce_
         second = get_all_pairs(brand_relation_based_pairs_with_meta, cared_aspects, not_cared_aspects, determiners)
         total = first.union(second)
         save_pickle(f'../data/brand/{brand}_pairs', total)
+        print_brand_pairs_only(d=brand_relation_based_pairs_with_meta, not_cared_aspects=not_cared_aspects, determiners=determiners)
     else:
         first = {(brand, i) for i in cared_aspects}
         second = get_brand_pairs(d=brand_relation_based_pairs_with_meta, primary_aspects=cared_aspects, not_cared_aspects=not_cared_aspects, determiners=determiners)
