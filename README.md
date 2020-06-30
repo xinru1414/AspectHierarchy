@@ -12,7 +12,9 @@ This package uses [feng-hirst-rst-parser](https://github.com/arne-cl/feng-hirst-
 ```
 $ docker build -t feng-hirst .
 ```
-If you have problems installing pipenv, you can [install packages using pip and virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
+Now, update the project path in `runrst.sh` in `feng-hirst-rst-parser/preprocessed_texts` dir.
+
+Note: if you have problems installing pipenv, you can [install packages using pip and virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 ```
 $ pip install -r requirements.txt
 ```
