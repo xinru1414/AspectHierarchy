@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Note: Update the project directory path in the following docker run command.
 for file in *.txt
 do
     echo "$file"
