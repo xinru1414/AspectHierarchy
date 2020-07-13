@@ -2,7 +2,7 @@
 Opinion mining on Amazon product reviews [using rhetorical structure theory and graph analysis](https://arxiv.org/abs/1909.01800).
 
 ## Installation & Dependencies 
-First, install [docker](https://www.docker.com/). Next, install [pipenv](https://pipenv-fork.readthedocs.io/en/latest/install.html).
+First, install [docker](https://www.docker.com/). Next, install [pipenv](https://pipenv-fork.readthedocs.io/en/latest/install.html). Then install and configure [Graphviz](https://graphviz.readthedocs.io/en/stable/manual.html).
 
 After cloning the project, run the following command in the root dir `AspectHierarchy` to install all dependencies.
 ```
