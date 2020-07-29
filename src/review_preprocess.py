@@ -30,8 +30,8 @@ def write_df(data: pd.DataFrame, od: str):
 
 
 @click.command()
-@click.option('-r', '--review', type=str, default='../data/preprocessed/brand_data_new.csv')
-@click.option('-o', '--output_dir', type=str, default='../feng-2/feng-hirst-rst-parser/tmp2/')
+@click.option('-r', '--review', type=str, default='../data/review/sample_data.csv')
+@click.option('-o', '--output_dir', type=str, default='../feng-hirst-rst-parser/preprocessed_texts/')
 def main(review, output_dir):
     reviews = pd.read_csv(review)
     new_reviews = update_brand_name(reviews)
