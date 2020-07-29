@@ -2,7 +2,7 @@
 Opinion mining on Amazon product reviews [using rhetorical structure theory and graph analysis](https://arxiv.org/abs/1909.01800).
 
 ## Installation & Dependencies 
-First, install [docker](https://www.docker.com/). Next, install [pipenv](https://pipenv-fork.readthedocs.io/en/latest/install.html).
+First, install [docker](https://www.docker.com/). Next, install [pipenv](https://pipenv-fork.readthedocs.io/en/latest/install.html). Then install and configure [Graphviz](https://graphviz.readthedocs.io/en/stable/manual.html).
 
 After cloning the project, run the following command in the root dir `AspectHierarchy` to install all dependencies.
 ```
@@ -12,7 +12,9 @@ This package uses [feng-hirst-rst-parser](https://github.com/arne-cl/feng-hirst-
 ```
 $ docker build -t feng-hirst .
 ```
-If you have problems installing pipenv, you can install python dependencies by running the following command:
+Now, update the project path in `runrst.sh` in `feng-hirst-rst-parser/preprocessed_texts` dir.
+
+Note: if you have problems installing pipenv, you can [install packages using pip and virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 ```
 $ pip install -r requirements.txt
 ```
@@ -21,7 +23,7 @@ $ pip install -r requirements.txt
 
 The system takes a CSV file as an input, including four columns: `Id`, `Text`, `Brand` and `ReviewRating`. Column `Id` represents the review id, Column `Text` represents the product review, Column `Brand` represents the product brand and Column `ReviewRating` represents the rating for the product in range `[0,100]`.
 
-Below is a step by step instruction on how to run the system. You can also find them in the `run.sh` file in `src` dir.
+Below is a step by step instruction on how to run the system. You can also find them in the `run.sh` file in `src` dir. For the non pipenv version, see `run_nopipenv.sh`.
 
 1. Run the following command in `src` dir to prepare data for the RST parser.
 ```

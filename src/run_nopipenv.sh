@@ -15,7 +15,7 @@ docker build -t feng-hirst .
 echo '#################################################################'
 echo Preprocessing reviews.
 cd ../src/
-pipenv run python review_preprocess.py -r $input -o ../feng-hirst-rst-parser/preprocessed_texts/
+python review_preprocess.py -r $input -o ../feng-hirst-rst-parser/preprocessed_texts/
 echo '#################################################################'
 echo Running feng-hirst-rst-parser. This can take a while.
 cd ../feng-hirst-rst-parser/preprocessed_texts/
@@ -23,11 +23,11 @@ cd ../feng-hirst-rst-parser/preprocessed_texts/
 echo '#################################################################'
 echo Parsing RST result, create RST graphs and generate aspect pairs.
 cd ../../src/
-pipenv run python -m spacy download en_core_web_sm
-pipenv run python treeparser.py -i ../feng-hirst-rst-parser/results -o ../rst_results
+python -m spacy download en_core_web_sm
+python treeparser.py -i ../feng-hirst-rst-parser/results -o ../rst_results
 echo '#################################################################'
 echo Generating and examining primary aspects.
-pipenv run python primary_aspects.py -p ../rst_results/noun_pairs.pickle -na ../data/resources/not_cared_aspects -k $keyword
+python primary_aspects.py -p ../rst_results/noun_pairs.pickle -na ../data/resources/not_cared_aspects -k $keyword
 echo '#################################################################'
 echo Type in the selected primary aspects from the above aspect list, one aspect per line. Enter ctrl + D on a new line when finished.
 arrAspects=()
@@ -38,9 +38,9 @@ done
 printf "%s\n" "${arrAspects[@]}" >> ../data/resources/primary_aspects
 echo '#################################################################'
 echo Generating and examining secondary aspects.
-pipenv run python aspect_hierarchy.py -b $brand -p ../feng-hirst-rst-parser/results -d $input -ca ../data/resources/primary_aspects -na ../data/resources/not_cared_aspects -rl ../data/resources/relations -dt ../data/resources/determiners -k $keyword > "../data/brand/$brand.txt"
+python aspect_hierarchy.py -b $brand -p ../feng-hirst-rst-parser/results -d $input -ca ../data/resources/primary_aspects -na ../data/resources/not_cared_aspects -rl ../data/resources/relations -dt ../data/resources/determiners -k $keyword > "../data/brand/$brand.txt"
 echo '#################################################################'
 echo Creating aspect hierarchy graphs.
-pipenv run python gen_graph.py -b $brand -o ../graphs/
+python gen_graph.py -b $brand -o ../graphs/
 echo '#################################################################'
 echo Done
