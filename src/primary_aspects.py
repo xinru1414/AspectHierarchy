@@ -14,7 +14,7 @@ from textblob import TextBlob
 import click
 import nltk
 nltk.download('punkt')
-nltk.download('average_perceptron_tagger')
+nltk.download('averaged_perceptron_tagger')
 
 
 def keyword_pairs(l: List, keyword: str) -> List:
