@@ -29,18 +29,26 @@ Below is a step by step instruction on how to run the system. You can also find 
 ```
 $ pipenv run python review_preprocess.py
 ```
+After this command, please go to `feng-hirst-rst-parser/preprocessed_texts/` dir and make sure there is a list of .txt files generated. Each .txt file should contain a review.
+
 2. Run the following command in `feng-hirst-rst-parser/preprocessed_texts` dir to perform RST.
 ```
 $ ./runrst.sh
 ```
+After this command, please go to `feng-hirst-rst-parser/results` dir and make sure there is a list of .parse files generated. Each .parse file should contain a flat RST parse tree.
+
 3. Run the following command in `src` dir to parse RST result, create RST graphs and generate aspect pairs.
 ```
 $ pipenv run python treeparser.py
 ```
+After this command, please go to `rst_results` dir and make sure `noun_pairs.pickle` exist and is not empty. Also `rst_results/graphs/` dir should contain a slit of .png files and their supporting non .png ending files.
+
 4. Run the following command in `src` dir to generate and examine primary aspects.
 ```
 $ pipenv run python primary_aspects.py
 ```
+Check that there is a list of primary aspects printed out.
+
 5. Run the following command in `src` dir to generate and examine secondary aspects.
 ```
 $ pipenv run python aspect_hierarchy.py
