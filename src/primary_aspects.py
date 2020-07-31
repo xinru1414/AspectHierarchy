@@ -2,7 +2,7 @@
 This file contains code for generating primary aspect pairs
 
 Commind line input:
-    -p: path to aspect pairs generated from treeparser (see gen_list_of_pairs), default '../rst_results/noun_pairs.pickle2'
+    -p: path to aspect pairs generated from treeparser (see gen_list_of_pairs), default '../rst_results/noun_pairs.pickle'
 Output:
     Most common primary aspects are printed in the console
     The primary aspects in data/resources/primary_aspects are selected from these aspects
@@ -13,6 +13,8 @@ from utils.utils import *
 from textblob import TextBlob
 import click
 import nltk
+nltk.download(‘punkt’)
+nltk.download(‘average_perceptron_tagger’)
 
 
 def keyword_pairs(l: List, keyword: str) -> List:
@@ -124,7 +126,7 @@ def relavant_nmp(l: List, relavant: List, relatedwords: List, not_cared_aspects:
 
 
 @click.command()
-@click.option('-p', '--pairs', default='../rst_results/noun_pairs.pickle2')
+@click.option('-p', '--pairs', default='../rst_results/noun_pairs.pickle')
 @click.option('-na', '--resource_na', default='../data/resources/not_cared_aspects')
 @click.option('-k', '--keyword', default='mattress')
 def main(pairs, resource_na, keyword):
